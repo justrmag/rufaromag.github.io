@@ -106,6 +106,30 @@
             text-align: center;
             z-index: 1;
             padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid transparent;
+            background: linear-gradient(135deg, #00d9ff, #7b2ff7);
+            padding: 4px;
+            margin-bottom: 2rem;
+            animation: slideUp 1s ease-out;
+            box-shadow: 0 10px 40px rgba(0, 217, 255, 0.3);
+        }
+
+        .profile-image-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
         }
 
         .hero h1 {
@@ -115,14 +139,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: slideUp 1s ease-out;
+            animation: slideUp 1s ease-out 0.2s both;
         }
 
         .hero p {
             font-size: 1.5rem;
             color: #b0b0b0;
             margin-bottom: 2rem;
-            animation: slideUp 1s ease-out 0.2s both;
+            animation: slideUp 1s ease-out 0.4s both;
         }
 
         @keyframes slideUp {
@@ -145,7 +169,7 @@
             border-radius: 50px;
             font-weight: 600;
             transition: transform 0.3s, box-shadow 0.3s;
-            animation: slideUp 1s ease-out 0.4s both;
+            animation: slideUp 1s ease-out 0.6s both;
         }
 
         .cta-button:hover {
@@ -255,6 +279,13 @@
             align-items: center;
             justify-content: center;
             font-size: 3rem;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-content {
@@ -331,6 +362,11 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -363,8 +399,12 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
+            <div class="profile-image">
+                <!-- Replace 'profile.jpg' with your actual image filename -->
+                <img src="images/profile.jpg" alt="Rufaro Magara" class="profile-image-inner">
+            </div>
             <h1>Rufaro Magara</h1>
-            <p>Developer | Designer | Creator</p>
+            <p>Creative Technologist | Unity Developer | XR Creator</p>
             <a href="#contact" class="cta-button">Get In Touch</a>
         </div>
     </section>
@@ -373,12 +413,13 @@
         <h2>About Me</h2>
         <div class="about-content">
             <p>
-                Hi! I'm Rufaro Magara, a passionate developer with a love for creating beautiful and functional web experiences. 
-                I specialize in building modern, responsive websites and applications that make a difference.
+                Hi! I'm Rufaro Magara, a creative technologist and Informatics graduate exploring how technology, data, and storytelling can intersect to
+                create meaningful digital experiences. Skilled in XR development, data-driven problem solving, and human-centred
+                design. 
             </p>
             <p>
-                With a strong foundation in both front-end and back-end development, I bring ideas to life through clean code 
-                and thoughtful design. I'm constantly learning new technologies and pushing the boundaries of what's possible on the web.
+                Experienced in working across creative and technical teams to build immersive, educational, and socially
+                conscious projects that merge innovation with real-world impact.
             </p>
         </div>
     </section>
@@ -387,21 +428,21 @@
         <h2>Skills & Technologies</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>Frontend Development</h3>
+                <h3>Programming & Engines</h3>
                 <ul>
-                    <li>HTML5 & CSS3</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>React & Vue.js</li>
-                    <li>Responsive Design</li>
+                    <li>Unity (C#), C++, Python, SQL</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>SQL</li>
                 </ul>
             </div>
             <div class="skill-card">
-                <h3>Backend Development</h3>
+                <h3>XR Development:</h3>
                 <ul>
-                    <li>Node.js & Express</li>
-                    <li>Python & Django</li>
-                    <li>RESTful APIs</li>
-                    <li>Database Management</li>
+                    <li>VR Design & Development with Meta Quests 2/3</li>
+                    <li>WebAR</li>
+                    <li>VRChat</li>
+                    <li>Spatial.io</li>
                 </ul>
             </div>
             <div class="skill-card">
@@ -409,10 +450,18 @@
                 <ul>
                     <li>Git & GitHub</li>
                     <li>VS Code</li>
-                    <li>Figma & Design</li>
+                    <li>AWS (Cloud Essentials)</li>
                     <li>Agile Development</li>
+                    <li>SAP Analytics Cloud</li>
                 </ul>
             </div>
+            <div class="skill-card">
+                <h3>Other Competencies</h3>
+                <ul>
+                    <li>Auditing: Internal and IT Auditing</li>
+                    <li>data workflows</li>
+                    <li>prototyping</li>
+                    <li>software testing</li>
         </div>
     </section>
 
@@ -420,10 +469,16 @@
         <h2>Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">🚀</div>
+                <div class="project-image">
+                    <Replace with your actual project image: <img src="images/DFL.jpeg" alt="Project 1">
+                    🚀
+                </div>
                 <div class="project-content">
-                    <h3>Project One</h3>
-                    <p>A modern web application built with React and Node.js, featuring real-time updates and a beautiful UI.</p>
+                    <h3>Designs Futures Lab with Electric South and British Council</h3>
+                    <p>Selected as one of twelve participants for The Design Futures Lab 2023 to develop experiential, provocative and immersive digital narratives about sustainable fashion and design. 
+                        The programme included both a sustainable fashion workshop and a digital lab that challenged successful candidates to explore and expand their digital production skills in XR (extended reality) in Cape Town
+                    and immersive technologies. Collaborated with a fashion designer to develop a VR prototype that transforms
+                    collected underwater plastic waste into a marine-inspired garment, addressing sustainability in fashion..</p>
                     <div class="project-tags">
                         <span class="tag">React</span>
                         <span class="tag">Node.js</span>
@@ -432,10 +487,16 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image">💡</div>
+                <div class="project-image">
+                    <!-- Replace with: <img src="images/project2.png" alt="Project 2"> -->
+                    💡
+                </div>
                 <div class="project-content">
-                    <h3>Project Two</h3>
-                    <p>An innovative solution for task management with advanced features and seamless user experience.</p>
+                    <h3>Umongo Msindo</h3>
+                    <p>Designed and developed a 3D interactive Digital Library showcasing traditional musical instruments within in the
+                        Zulu Kingdom for the Umongo Msindo Exhibition using Unity (C#) Game Engine. Created detailed 3D models of musical
+                        instruments, integrating them into an immersive virtual environment. Developed custom Meta’s Instagram and
+                        Facebook filters featuring these 3D models, enhancing the exhibition's digital presence..</p>
                     <div class="project-tags">
                         <span class="tag">Vue.js</span>
                         <span class="tag">Python</span>
@@ -444,10 +505,13 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image">🎨</div>
+                <div class="project-image">
+                    <!-- Replace with: <img src="images/project3.png" alt="Project 3"> -->
+                    🎨
+                </div>
                 <div class="project-content">
-                    <h3>Project Three</h3>
-                    <p>A creative portfolio website showcasing modern design principles and smooth animations.</p>
+                    <h3>VR Mining</h3>
+                    <p>Developed VR functionality for Meta Quest 2/3 using Unity, integrating 360° videos for a mining exhibition for a mining company in Namibia.</p>
                     <div class="project-tags">
                         <span class="tag">HTML/CSS</span>
                         <span class="tag">JavaScript</span>
@@ -463,13 +527,10 @@
         <div class="contact-content">
             <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
             <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-link">
+                <a href="mailto:magara.rufaro@gmail.com" class="contact-link">
                     📧 Email
                 </a>
-                <a href="https://github.com/justrmag" target="_blank" class="contact-link">
-                    💻 GitHub
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link">
+                <a href="https://www.linkedin.com/in/rufaro-magara" target="_blank" class="contact-link">
                     💼 LinkedIn
                 </a>
             </div>
